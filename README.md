@@ -1,78 +1,34 @@
-# Calculadora TACF
+# Calculadora TACF — versão 2.0.0
 
-Simulador responsivo do **Teste de Avaliação do Condicionamento Físico (TACF)**, baseado nas tabelas dos **Anexos IV, V e VI da NSCA 54-3** disponibilizadas como referência para este projeto.
+Ferramenta **independente, não oficial**, de simulação do Teste de Avaliação do Condicionamento Físico.
 
 ## Funcionalidades
 
-- Perfil por sexo, idade e estatura.
-- Circunferência da cintura, flexões e abdominais.
-- Corrida/marcha de 12 minutos ou caminhada substitutiva de 4,8 km.
-- Pontuação por OIC e soma total (0 a 100 pontos).
-- Conceituação por prova e conceito global (I, S, B, MB, E).
-- Indicação de suficiência individual, metas para o próximo conceito e cópia do resultado.
-- Interface para celular ou computador; PWA instalável, com acesso offline depois da primeira visita.
+- Calculadora de pontuação e suficiência por OIC, conforme o arquivo de anexos fornecido.
+- Consulta completa aos índices de suficiência e pontos por sexo/faixa etária/estatura.
+- Planejador da corrida de 12 minutos: distância-alvo para S/B/MB/E, margem opcional, pace, velocidade, voltas de 400 m e parciais de 200 m; conversão de pace para distância estimada.
+- Metas globais (20/40/70/90 pontos), diagnóstico individual e indicação de próximos limites.
+- Histórico salvo apenas no armazenamento do navegador, recuperação e exclusão das simulações, compartilhamento por texto.
+- Interface responsiva inspirada em azuis da FAB, sem utilizar brasões oficiais.
+- Instalação PWA e uso offline após primeira visita.
 
-**Nota importante:** o aplicativo é **não oficial** e não substitui a avaliação regulamentar. A nota global não corrige uma insuficiência individual. A caminhada substitutiva depende das condições e da decisão do avaliador previstas no Anexo V, não sendo livre escolha do avaliado.
+## Base normativa e importante limitação
 
-### Critério para valores entre linhas da tabela
+Pontuações e limites vêm dos **Anexos IV, V e VI do arquivo disponibilizado**. O arquivo começa no Anexo IV, sem capa/portaria, de modo que **a edição exata dele não pode ser afirmada**. Em 2026, houve reedição oficial da **NSCA 54-3 pela Portaria CDA nº 28/SCMD, de 25 de abril de 2026**. Este software **ainda não foi integralmente comparado** com a edição de 2026. Veja a reedição no [SISLAER da FAB](https://www.sislaer.fab.mil.br/TerminalWebCENDOC/VisualizadorPdf?codigoArquivo=47976&tipoMidia=0).
 
-Para evitar atribuir pontuação superior à marca registrada, a consulta usa a marca imediatamente inferior para a corrida (incrementos de 10 m), superior para a cintura (incrementos de 0,5 cm) e tempo imediatamente mais lento para a caminhada. Não se interpola a nota entre linhas. A suficiência individual usa diretamente os limites do Anexo IV e do Anexo V.
+As notas de dados intermediários usam consulta conservadora, uma convenção informativa de software. A caminhada substitutiva depende de decisão do avaliador e requisitos médicos; não é livre escolha do militar. Use a norma vigente para fins oficiais.
 
-## Arquivos
+## Publicar gratuitamente no GitHub Pages
 
-```text
-calculadora-tacf/
-├── index.html           # Interface, estilos, tabelas e lógica de cálculo
-├── manifest.webmanifest # Configuração de instalação como PWA
-├── sw.js                # Armazenamento offline e atualização online
-├── icon-192.png         # Ícone do aplicativo
-├── icon-512.png         # Ícone do aplicativo
-├── .nojekyll            # Evita processamento desnecessário pelo Jekyll
-└── README.md            # Documentação
-```
-
-## Publicar no GitHub Pages (sem terminal)
-
-1. Crie um repositório no GitHub, por exemplo **calculadora-tacf**.
-2. Clique em **Add file → Upload files**.
-3. Envie os arquivos desta pasta para a **raiz** do repositório (não envie apenas o `.zip` nem uma pasta contendo os arquivos).
-4. Clique em **Commit changes**.
-5. Entre em **Settings → Pages**.
-6. Em **Build and deployment → Source**, selecione **Deploy from a branch**.
-7. Selecione **main** e **/(root)**; clique em **Save**.
-8. Após a publicação, acesse: `https://SEU-USUARIO.github.io/calculadora-tacf/` (substitua o usuário e, se necessário, o nome do repositório).
-
-Se o repositório tiver outro nome, a URL termina com o nome correspondente. As alterações futuras em `main` serão publicadas automaticamente.
-
-## Publicar pelo terminal
-
-No diretório que contém estes arquivos:
-
-```bash
-git init
-git add .
-git commit -m "Versão inicial da calculadora TACF"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/calculadora-tacf.git
-git push -u origin main
-```
-
-Crie o repositório vazio no GitHub antes do `push` e ajuste `SEU-USUARIO`.
+1. Crie um repositório, como `calculadora-tacf`.
+2. Extraia o ZIP e faça upload de **todos os arquivos da pasta** para a raiz do repositório, em **Add file → Upload files → Commit changes**.
+3. Em **Settings → Pages**, selecione **Deploy from a branch**, depois **main** e **/(root)**.
+4. Acesse `https://SEU-USUARIO.github.io/calculadora-tacf/`.
 
 ## Executar localmente
 
-Abra `index.html` no navegador. Para testar a instalação PWA e o service worker, sirva a pasta com HTTP local:
+Abra `index.html` ou rode `python -m http.server 8000` na pasta e acesse http://localhost:8000. O PWA depende de HTTPS ou localhost.
 
-```bash
-python -m http.server 8000
-```
+## Estrutura
 
-Depois abra `http://localhost:8000/`.
-
-## Base normativa
-
-- **Anexo IV:** apreciação de suficiência por sexo e faixa etária/estatura e conceito global.
-- **Anexo V:** prova substitutiva da capacidade aeróbica.
-- **Anexo VI:** pontuação de cada OIC por sexo e faixa etária/estatura.
-
-Os valores precisam ser conferidos com a edição normativa aplicável antes de uso institucional ou em avaliação oficial.
+`index.html`, `manifest.webmanifest`, `sw.js`, `icon-192.png`, `icon-512.png`, `.nojekyll`, `README.md`.

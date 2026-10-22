@@ -1,1 +1,23 @@
-{"name": "Calculadora TACF — NSCA 54-3", "short_name": "TACF", "description": "Simulador offline de pontuação e suficiência para o TACF", "start_url": "./", "scope": "./", "display": "standalone", "background_color": "#f3f6fb", "theme_color": "#0b1830", "icons": [{"src": "./icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "./icon-512.png", "sizes": "512x512", "type": "image/png"}]}
+{
+  "name": "Calculadora TACF — Simulador Independente",
+  "short_name": "TACF",
+  "description": "Simule e planeje provas do TACF com consulta de tabelas. Ferramenta não oficial.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#0c2343",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

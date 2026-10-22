@@ -97,11 +97,69 @@
     @media(max-width:880px){.layout{grid-template-columns:1fr}.summary{position:static}.summary-hero{padding:21px}.summary-body{padding:20px}.container{padding-top:22px}.intro{margin-bottom:21px}}
     @media(max-width:540px){.top-inner{width:calc(100% - 30px)}.top-tag{font-size:10px;padding:7px 8px}.container{padding:22px 13px 42px}.profile-grid{grid-template-columns:1fr 1fr;gap:12px}.profile-grid .sex-field{grid-column:span 2}.panel-pad,.test-panel .panel-pad{padding:16px}.test-controls{grid-template-columns:minmax(0,1.3fr) minmax(100px,.7fr);gap:9px}.test-name{font-size:15px}.test-sub{font-size:11px}.test-status{gap:5px}.grade-label{font-size:10px}.score-pill{font-size:11px;padding:6px}.footer-actions{align-items:flex-start}.intro .lead{font-size:13px}.mode-switch button{font-size:11px}}
     @media print{body{background:white}.topbar{background:#0b1830;-webkit-print-color-adjust:exact;print-color-adjust:exact}.container{padding:15px}.layout{grid-template-columns:1.3fr 1fr}.summary{position:static}.btn,.footer-actions{display:none}.panel{box-shadow:none;break-inside:avoid}.summary-hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+  
+/* V2: identidade inspirada nas cores da FAB, sem vínculo institucional */
+:root{--navy:#0c2343;--blue:#2460aa;--line:#dfe7f1}
+.topbar{background:linear-gradient(100deg,#09203e,#154579)}
+.brand-mark{background:#f5faff;color:#1c559b;border:1px solid #b9d5f6}
+.top-tag{border-color:#608ab7;color:white}
+.tab-nav{display:flex;gap:8px;max-width:1160px;margin:0 auto;padding:12px 20px 0;overflow-x:auto;scrollbar-width:none}
+.tab-nav button{flex:1;white-space:nowrap;min-width:90px;border:1px solid #dce6f1;border-radius:12px;background:#fff;color:#5d6e86;padding:11px 16px;font-size:13px;font-weight:750}
+.tab-nav button[aria-selected="true"]{background:#174b88;color:#fff;border-color:#174b88}
+.view[hidden]{display:none!important}
+.notice-top{font-size:11px;color:#6f7e8e;line-height:1.5;margin:12px 0 0}
+.view-intro{margin-bottom:20px}
+.view-intro h2{font-size:clamp(24px,3vw,31px);margin:0 0 6px;letter-spacing:-.035em}
+.view-intro p{color:#5f7188;font-size:13px;margin:0}
+.app-section{margin-top:18px}
+.app-section h3{font-size:16px;margin:0 0 12px}
+.control-row{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:14px 0}
+.control-row label{flex:1;min-width:130px;color:#5a6e84;font-weight:700;font-size:12px}
+.control-row select,.control-row input,.mini-select{display:block;width:100%;padding:10px;border:1px solid #d2ddeb;border-radius:10px;font-size:14px;color:#173451;background:white;margin-top:6px;min-height:43px}
+.data-scroll{overflow:auto;max-height:430px;border:1px solid #e4ebf4;border-radius:12px;background:white}
+.data-scroll table{border-collapse:collapse;font-size:12px;width:100%;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.data-scroll td,.data-scroll th{border-bottom:1px solid #edf1f7;padding:10px 12px}
+.data-scroll th{background:#e9f1fb;color:#1c4a81;position:sticky;top:0;z-index:1}
+.data-scroll td:first-child,.data-scroll th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:1;font-weight:750}
+.data-scroll th:first-child{background:#e9f1fb;z-index:2}
+.data-scroll tr.active-age td{background:#e9f5ff;color:#174b88}
+.data-scroll tr.active-age td:first-child{background:#d7eaff}
+.table-help{font-size:12px;color:#637790;line-height:1.6}
+.key-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.stat{border:1px solid #e4eaf4;border-radius:12px;padding:14px;background:#f7faff;min-width:0}
+.stat small{display:block;color:#667b93;font-size:11px}
+.stat strong{display:block;font-size:24px;letter-spacing:-.03em;color:#194e8f;overflow-wrap:anywhere;margin-top:4px}
+.stat .sub{font-size:11px;color:#74869e}
+.goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.goal-item{border:1px solid #e4eaf4;border-radius:11px;padding:12px;background:#fbfdff}
+.goal-item strong{font-size:13px;display:block;color:#1b3558}
+.goal-item small{color:#658099;display:block;margin-top:4px;line-height:1.4}
+.running-card .key-stats{grid-template-columns:repeat(3,1fr)}
+.history-row{border-bottom:1px solid #e8eef5;padding:11px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.history-row:last-child{border-bottom:0}
+.history-row strong{font-size:13px;color:#203c5f}
+.history-row small{display:block;color:#71829a;font-size:11px;margin-top:3px}
+.history-row button{background:#f0f5fc;color:#255a98;border:1px solid #dce7f5;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:750}
+.about-section{max-width:800px;margin:auto}
+.about-section .panel{margin-bottom:15px}
+.about-section p,.about-section li{font-size:14px;color:#556c87;line-height:1.75}
+.about-section a{color:#1d5da7}
+.info-tag{font-size:11px;font-weight:750;color:#255b99}
+.storage-notice{color:#6e7d92;font-size:11px}
+@media(max-width:600px){.tab-nav{padding:10px 13px 0;gap:6px}.tab-nav button{padding:11px 6px;font-size:12px}.key-stats{gap:6px}.stat{padding:10px}.stat strong{font-size:19px}.goal-grid{grid-template-columns:1fr}.control-row{gap:8px}.running-card .key-stats{grid-template-columns:repeat(2,1fr)}.data-scroll{max-height:370px}}
+@media print{.tab-nav,.history-row button,.control-row,.btn,.notice-top{display:none!important}.view:not([hidden]){display:block}.view[hidden]{display:none!important}}
+
   </style>
 </head>
 <body>
-<header class="topbar"><div class="top-inner"><div class="brand"><div class="brand-mark">TACF</div><div class="brand-text"><strong>Calculadora TACF</strong><span>Simulador de pontuação • COMAER</span></div></div><span class="top-tag">Anexos IV, V e VI</span></div></header>
+<header class="topbar"><div class="top-inner"><div class="brand"><div class="brand-mark">TACF</div><div class="brand-text"><strong>Calculadora TACF</strong><span>Ferramenta independente • inspirada na FAB</span></div></div><span class="top-tag">v2.0</span></div></header>
+<nav class="tab-nav" role="tablist" aria-label="Seções do aplicativo">
+<button type="button" data-tab="calculadora" role="tab" aria-controls="view-calculadora" aria-selected="true">Calculadora</button>
+<button type="button" data-tab="consulta" role="tab" aria-controls="view-consulta" aria-selected="false">Tabelas</button>
+<button type="button" data-tab="sobre" role="tab" aria-controls="view-sobre" aria-selected="false">Sobre</button>
+</nav>
 <main class="container">
+<section class="view" id="view-calculadora" role="tabpanel" aria-label="Calculadora">
   <section class="intro"><div class="eyebrow">Condicionamento físico</div><h1>Calcule seu resultado no TACF.</h1><p class="lead">Informe idade, estatura e desempenho nas quatro provas. Veja os pontos por OIC, a conceituação global e os índices de suficiência previstos no documento fornecido.</p></section>
   <div class="layout">
     <div class="stack">
@@ -114,7 +172,7 @@
       <section class="panel test-panel" aria-label="Flexões de braço"><div class="panel-pad"><div class="test-header"><div><div class="test-kicker" id="oic-flexoes">OIC 02</div><h3 class="test-name">Flexões de braço</h3><p class="test-sub" id="push-description">Apoio de frente sobre o solo • até 10 pontos</p></div><div class="score-pill" id="pts-flexoes">— / 10</div></div><div class="test-controls"><label class="field test-input"><span class="field-name">Repetições</span><input class="number-input" id="flexoes" type="number" min="0" max="300" step="1" inputmode="numeric" placeholder="Ex.: 40" autocomplete="off" /></label><div class="test-status"><span class="grade" id="grade-flexoes">—</span><span class="grade-label" id="label-flexoes">Informe os dados</span></div></div><div class="track"><div class="fill" id="bar-flexoes"></div></div><div class="goal" id="goal-flexoes"></div></div></section>
       <section class="panel test-panel" aria-label="Flexões abdominais"><div class="panel-pad"><div class="test-header"><div><div class="test-kicker" id="oic-abdominais">OIC 03</div><h3 class="test-name">Abdominais</h3><p class="test-sub">Flexão do tronco sobre as coxas em 1 minuto • até 10 pontos</p></div><div class="score-pill" id="pts-abdominais">— / 10</div></div><div class="test-controls"><label class="field test-input"><span class="field-name">Repetições</span><input class="number-input" id="abdominais" type="number" min="0" max="300" step="1" inputmode="numeric" placeholder="Ex.: 45" autocomplete="off" /></label><div class="test-status"><span class="grade" id="grade-abdominais">—</span><span class="grade-label" id="label-abdominais">Informe os dados</span></div></div><div class="track"><div class="fill" id="bar-abdominais"></div></div><div class="goal" id="goal-abdominais"></div></div></section>
       <section class="panel test-panel" aria-label="Capacidade aeróbica"><div class="panel-pad"><div class="test-header"><div><div class="test-kicker" id="oic-aerobico">OIC 04</div><h3 class="test-name">Capacidade aeróbica</h3><p class="test-sub">Até 50 pontos</p></div><div class="score-pill" id="pts-aerobico">— / 50</div></div><div class="mode-switch" role="group" aria-label="Tipo de avaliação aeróbica"><button class="active" type="button" data-mode="run" aria-pressed="true">Corrida / marcha · 12 min</button><button type="button" data-mode="walk" aria-pressed="false">Substitutivo · 4,8 km</button></div><div class="test-controls"><label class="field test-input"><span class="field-name" id="aero-label">Distância <span class="field-note">(metros)</span></span><input class="number-input" id="aerobico" type="number" min="0" max="10000" step="10" inputmode="numeric" placeholder="Ex.: 2.600" autocomplete="off" /></label><div class="test-status"><span class="grade" id="grade-aerobico">—</span><span class="grade-label" id="label-aerobico">Informe os dados</span></div></div><div class="track"><div class="fill" id="bar-aerobico"></div></div><div class="goal" id="goal-aerobico"></div><div class="warning-inline" id="aero-warning" hidden>O teste de caminhada de 4,8 km é substitutivo e sua aplicação depende de decisão do avaliador e de parecer médico nos termos do Anexo V. A coluna I desse anexo parece apresentar o sinal de desigualdade invertido; para insuficiência, o simulador utiliza o limite de S e a tabela de pontos do Anexo VI.</div></div></section>
-      <div class="footer-actions"><button type="button" id="reset" class="text-link">Limpar dados e recomeçar</button><span style="font-size:11px;color:#8491a2">Uso informativo • sem armazenamento</span></div>
+      <div class="footer-actions"><button type="button" id="reset" class="text-link">Limpar dados e recomeçar</button><span style="font-size:11px;color:#8491a2">Uso informativo • dados armazenados só no aparelho</span></div>
     </div>
     <aside class="stack" aria-label="Resumo de resultados">
       <section class="panel summary"><div class="summary-hero"><p class="summary-title">Pontuação global</p><div class="total-row"><span class="total" id="total">—</span><span class="total-unit">/ 100 pts</span></div><div class="level"><span class="level-chip" id="global-code">—</span><span class="level-name" id="global-name">Aguardando as quatro provas</span></div><div class="global-progress"><span class="part" id="part-cintura"></span><span class="part" id="part-flexoes"></span><span class="part" id="part-abdominais"></span><span class="part" id="part-aerobico"></span></div></div><div class="summary-body">
@@ -123,12 +181,80 @@
         <div class="summary-row"><span class="name">Abdominais</span><strong id="sum-abdominais">—</strong></div>
         <div class="summary-row"><span class="name">Corrida / caminhada</span><strong id="sum-aerobico">—</strong></div>
         <div class="situation" id="situation" role="status" aria-live="polite">Preencha o perfil e as quatro provas para calcular o resultado completo.</div>
-        <div class="btn-row"><button class="btn primary" type="button" id="copy" disabled>Copiar resultado</button><button class="btn" type="button" id="print" onclick="window.print()">Imprimir</button></div>
+        <div class="btn-row"><button class="btn primary" type="button" id="copy" disabled>Copiar resultado</button><button class="btn" type="button" id="share" disabled>Compartilhar</button><button class="btn" type="button" id="print" onclick="window.print()">Imprimir</button></div>
       </div></section>
       <section class="panel panel-pad legend"><div class="section-head" style="margin-bottom:12px"><h2>Como interpretar</h2></div><p><strong>E</strong> Excelente · <strong>MB</strong> Muito Bom · <strong>B</strong> Bom · <strong>S</strong> Satisfatório · <strong>I</strong> Insatisfatório.</p><p>A conceituação global corresponde ao somatório de quatro notas, conforme o Quadro 4 do Anexo IV.</p><p>O app também apresenta a suficiência individual dos OIC. A pontuação global, isoladamente, <strong>não substitui a verificação de aptidão em cada prova</strong> nem os procedimentos oficiais da avaliação.</p><p><strong>Consulta das tabelas:</strong> em entradas entre valores tabelados, utiliza-se a marca conservadora (cintura para cima; distância para baixo; tempo para cima). Essa convenção do simulador não é uma regra expressa no anexo.</p><p id="female-note" hidden><strong>Feminino:</strong> para flexões, esta versão utiliza os índices sem apoio dos joelhos, previstos a partir do TACF/1 de 2026.</p></section>
     </aside>
   </div>
-  <p class="footnote">Fonte: documento fornecido — NSCA 54-3 (COMGEP), Anexo IV (conceituação e suficiência), Anexo V (teste substitutivo) e Anexo VI (pontos por OIC). Simulador independente, sem vínculo oficial. Consulte a norma completa e o avaliador para casos especiais, dispensas, ajustes de execução e homologação do TACF.</p>
+  <p class="footnote">Fonte dos cálculos: Anexos IV, V e VI do arquivo NSCA 54-3 fornecido. O documento anexado não contém capa nem identificação inequívoca de edição. Existe reedição de 2026, ainda não validada integralmente nesta calculadora. Ferramenta independente e não oficial.</p>
+
+<section class="panel panel-pad app-section running-card" aria-labelledby="corrida-title">
+<div class="section-head"><h2 id="corrida-title">Planejador de corrida (12 minutos)</h2><span class="mini">Ritmo constante estimado</span></div>
+<p class="table-help">Use a distância mínima da sua categoria, uma margem opcional ou simule outro pace. Os resultados de ritmo são auxiliares ao treino, não critérios adicionais da norma.</p>
+<div class="control-row">
+<label>Conceito individual desejado<select id="pace-grade"><option value="S">S — Satisfatório</option><option value="B">B — Bom</option><option value="MB">MB — Muito Bom</option><option value="E">E — Excelente</option></select></label>
+<label>Margem planejada<select id="pace-margin"><option value="0">0 metros</option><option value="50">+50 metros</option><option value="100" selected>+100 metros</option><option value="200">+200 metros</option><option value="300">+300 metros</option></select></label>
+<label>Pace conhecido (min:seg/km)<input id="pace-input" inputmode="numeric" placeholder="Ex.: 05:00" aria-label="Pace previsto para o teste, em minutos e segundos por km"></label>
+</div>
+<div class="key-stats">
+<div class="stat"><small>Distância-alvo</small><strong id="pace-distance">—</strong><span class="sub">em 12 minutos</span></div>
+<div class="stat"><small>Pace necessário</small><strong id="pace-target">—</strong><span class="sub">min/km</span></div>
+<div class="stat"><small>Volta de 400 m</small><strong id="pace-lap">—</strong><span class="sub">tempo médio</span></div>
+</div>
+<div class="key-stats">
+<div class="stat"><small>Velocidade</small><strong id="pace-speed">—</strong><span class="sub">km/h</span></div>
+<div class="stat"><small>Parcial de 200 m</small><strong id="pace-half">—</strong><span class="sub">ritmo médio</span></div>
+<div class="stat"><small>Seu pace renderia</small><strong id="pace-projection">—</strong><span class="sub">metros em 12 min</span></div>
+</div>
+<p class="table-help" id="pace-note" role="status">Informe idade para consultar sua meta etária.</p>
+</section>
+<section class="panel panel-pad app-section" aria-labelledby="global-goal-title">
+<div class="section-head"><h2 id="global-goal-title">Metas e diagnóstico</h2><span class="mini">Suficiência e pontuação</span></div>
+<div class="control-row"><label>Conceito global pretendido<select id="global-goal"><option value="20">S — Satisfatório (20 pontos)</option><option value="40">B — Bom (40 pontos)</option><option value="70" selected>MB — Muito Bom (70 pontos)</option><option value="90">E — Excelente (90 pontos)</option></select></label></div>
+<p class="table-help" id="global-gap">Insira os quatro resultados para comparar com sua meta global.</p>
+<div class="goal-grid" id="diagnostic-grid"><div class="goal-item"><strong>Diagnóstico por prova</strong><small>Os resultados aparecerão conforme o preenchimento.</small></div></div>
+</section>
+<section class="panel panel-pad app-section" aria-labelledby="history-title">
+<div class="section-head"><h2 id="history-title">Minhas simulações</h2><span class="mini">Apenas neste dispositivo</span></div>
+<p class="table-help">Salve resultados para comparar sua evolução. Sem cadastro nem envio a servidor. Os dados podem desaparecer ao limpar o navegador.</p>
+<div class="btn-row"><button type="button" class="btn primary" id="history-save" disabled>Salvar resultado</button><button type="button" class="btn" id="history-clear">Apagar histórico</button></div>
+<div id="history-entries"><p class="storage-notice">Nenhuma simulação salva.</p></div>
+</section>
+</section>
+<section class="view" id="view-consulta" role="tabpanel" aria-label="Tabelas de referência" hidden>
+<div class="view-intro"><div class="eyebrow">Consulta independente</div><h2>Tabelas de suficiência e pontuação</h2><p>Consulte todas as faixas, sem precisar fazer uma simulação. Use os seletores para ver os limites e os pontos de cada prova.</p></div>
+<section class="panel panel-pad">
+<div class="control-row"><label>Sexo<select id="table-sex"><option value="M">Masculino</option><option value="F">Feminino</option></select></label>
+<label>Prova<select id="table-test"><option value="waist">Circunferência da cintura</option><option value="push">Flexões</option><option value="abs">Abdominais</option><option value="run">Corrida de 12 minutos</option><option value="walk">Caminhada substitutiva 4,8 km</option></select></label>
+</div>
+<h3>Apreciação de suficiência — Anexos IV/V</h3>
+<p class="table-help">As cinco classificações individuais: I (não apto), S, B, MB e E. A aptidão global é distinta da classificação de cada OIC.</p>
+<div class="data-scroll" id="sufficiency-table"></div>
+<h3 style="margin-top:26px">Pontuação exata — Anexo VI</h3>
+<p class="table-help">A tabela completa de pontos do OIC escolhido, com todas as faixas. Role horizontalmente no celular. Os valores se referem ao arquivo fornecido.</p>
+<div class="data-scroll" id="points-table"></div>
+<p class="table-help" id="consult-note"></p>
+</section>
+</section>
+<section class="view" id="view-sobre" role="tabpanel" aria-label="Sobre o aplicativo" hidden>
+<div class="view-intro"><div class="eyebrow">Identificação e transparência</div><h2>Sobre a Calculadora TACF</h2><p>Saiba qual documento sustenta os números da calculadora e quais são as limitações desta ferramenta.</p></div>
+<div class="about-section">
+<section class="panel panel-pad"><h3>Documento de referência usado nos cálculos</h3>
+<p><strong>NSCA 54-3 — Teste de Avaliação do Condicionamento Físico no Comando da Aeronáutica.</strong></p>
+<p>Os dados incorporados são os dos Anexos IV (conceituação e suficiência), V (teste substitutivo) e VI (tabelas de pontos) do PDF enviado para o desenvolvimento.</p>
+<p><strong>Edição do PDF enviado:</strong> não identificável com certeza, pois o recorte disponibilizado inicia no Anexo IV e não contém a capa ou a portaria de aprovação.</p>
+<p><strong>Reedição oficial identificada:</strong> NSCA 54-3/2026, Portaria CDA nº 28/SCMD, de 25 de abril de 2026. <a href="https://www.sislaer.fab.mil.br/TerminalWebCENDOC/VisualizadorPdf?codigoArquivo=47976&amp;tipoMidia=0" target="_blank" rel="noopener noreferrer">Consultar a edição oficial de 2026 no SISLAER</a>.</p>
+<p><strong>Atenção:</strong> os dados deste app <strong>não foram integralmente confrontados</strong> com a reedição de 2026. Até essa revisão, não devem ser apresentados como resultados oficialmente atualizados de 2026.</p>
+</section>
+<section class="panel panel-pad"><h3>Transparência e limitações</h3>
+<p>Aplicação particular, independente, <strong>não oficial</strong>, sem afiliação, chancela ou homologação pela Força Aérea Brasileira. O aspecto visual é apenas inspirado em uma paleta de azuis associada à aeronáutica. Nenhum emblema oficial é utilizado.</p>
+<p>As notas são extraídas das linhas das tabelas. Entre linhas, o simulador aplica a marca conservadora: distância imediatamente inferior, cintura imediatamente superior e tempo da caminhada imediatamente mais lento. Isso é uma <strong>convenção do software</strong>, não uma regra expressa dos anexos.</p>
+<p>A caminhada substitutiva só pode ser definida pelo avaliador, com os requisitos médicos da norma. O aplicativo não substitui o TACF regulamentar, sua aferição nem homologação.</p>
+<p>O perfil e as simulações salvas ficam no próprio navegador; não há conta nem banco de dados remoto nesta versão.</p>
+</section>
+<section class="panel panel-pad"><h3>Versão do aplicativo</h3><p><strong>2.0.0</strong> — consulta de tabelas, planejador de pace, metas, diagnóstico, histórico local, exportação textual e interface responsiva.</p><p>Para evitar confusão com a norma, a versão do aplicativo e o ano da norma são informações separadas.</p></section>
+</div></section>
+
 </main>
 <script>
 'use strict';
@@ -270,5 +396,100 @@ recalcular();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){
  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 }
+</script>
+<script>
+'use strict';
+// Complementos v2: tabelas, pace e armazenamento privado local.
+const TABELAS_NOMES={waist:'Cintura (cm)',push:'Flexões (repetições)',abs:'Abdominais (repetições)',run:'Corrida (metros/12 min)',walk:'Caminhada (min:seg para 4,8 km)'};
+const PERFIL_KEY='tacf.v2.perfil', HIST_KEY='tacf.v2.historico';
+const safeGet=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key));return v??fallback}catch{return fallback}};
+const safeSet=(key,v)=>{try{localStorage.setItem(key,JSON.stringify(v));return true}catch{return false}};
+function faixasRotulos(arr,tipo){let anterior=0;return arr.map((fim,i)=>{
+ if(tipo==='waist')return i===0?'≤ '+fim:i===arr.length-1?'≥ '+(anterior+1):(anterior+1)+'–'+fim;
+ return i===0?'≤ '+fim:i===arr.length-1?'≥ '+(anterior+1):(anterior+1)+'–'+fim;
+ }).map((s,i)=>{anterior=arr[i];return s});}
+// Retorna rótulos completos, conservando o extremo aberto da última faixa.
+function faixaLabel(arr,i){return i===0?'≤ '+arr[0]:(i===arr.length-1?'≥ '+(arr[i-1]+1):(arr[i-1]+1)+'–'+arr[i]);}
+function tabelasHTML(){const sexo=$('table-sex').value,tipo=$('table-test').value,arr=FAIXAS[sexo][tipo];
+ const per=(tipo==='waist'&&Number.isInteger(nval('estatura')))?nval('estatura'):nval('idade');
+ const marcada=Number.isFinite(per)?idx(arr,per):-1;
+ const ranks=['I','S','B','MB','E'];
+ let h='<table aria-label="Suficiência por todas as faixas"><thead><tr><th>'+ (tipo==='waist'?'Estatura (cm)':'Faixa etária')+'</th>'+ranks.map(g=>'<th>'+g+'</th>').join('')+'</tr></thead><tbody>';
+ for(let i=0;i<arr.length;i++){
+  const v=LIMITES[sexo][tipo][i],down=tipo==='waist'||tipo==='walk';
+  const step=tipo==='walk'?1:tipo==='waist'?0.5:tipo==='run'?10:1;
+  const f=n=>tipo==='walk'?fmtTempo(n):tipo==='waist'?comma(n):integer(n);
+  const vals=down?[
+   '> '+f(v[0]), f(v[0])+' a '+f(v[1]+step),f(v[1])+' a '+f(v[2]+step),f(v[2])+' a '+f(v[3]+step),'≤ '+f(v[3])
+  ]:[
+   '< '+f(v[0]),f(v[0])+' a '+f(v[1]-step),f(v[1])+' a '+f(v[2]-step),f(v[2])+' a '+f(v[3]-step),'≥ '+f(v[3])
+  ];
+  h+='<tr'+(i===marcada?' class="active-age"':'')+'><td>'+faixaLabel(arr,i)+'</td>'+vals.map(x=>'<td>'+x+'</td>').join('')+'</tr>';
+ }
+ h+='</tbody></table>';$('sufficiency-table').innerHTML=h;
+ const data=TABELAS[tipo+'_'+sexo.toLowerCase()];
+ h='<table aria-label="Pontuação completa por faixas"><thead><tr><th>'+TABELAS_NOMES[tipo]+'</th>'+arr.map((_,i)=>'<th>'+faixaLabel(arr,i)+'</th>').join('')+'</tr></thead><tbody>';
+ data.forEach(row=>{h+='<tr><td>'+row[0]+'</td>'+row.slice(1).map((v,i)=>'<td'+(i===marcada?' style="font-weight:800;color:#245c9a"':'')+'>'+comma(v)+'</td>').join('')+'</tr>'});
+ h+='</tbody></table>';$('points-table').innerHTML=h;
+ $('consult-note').textContent=tipo==='walk'?'Substitutivo: o uso da caminhada depende de autorização do avaliador, conforme o Anexo V. A coluna I do material enviado apresenta possível inversão de sinal e deve ser interpretada pelo limite de aprovação S.':'A leitura das linhas intermediárias na calculadora é conservadora; os limites de suficiência aqui expostos vêm do Anexo IV.';
+}
+function formatPace(t){if(!Number.isFinite(t)||t<=0)return '—';let x=Math.round(t);return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+function paceSeconds(str){const s=String(str).trim();if(!/^\d{1,2}:\d{2}$/.test(s))return NaN;const [m,sec]=s.split(':').map(Number);return sec<60&&m>0?m*60+sec:NaN}
+function paceAtualiza(){const sexo=ESTADO.sexo,idade=nval('idade'),i=Number.isInteger(idade)&&idade>=18?idx(FAIXAS[sexo].run,idade):-1;
+ const rank={S:0,B:1,MB:2,E:3}[$('pace-grade').value],min=i>=0?LIMITES[sexo].run[i][rank]:NaN;
+ const alvo=min+Number($('pace-margin').value),p=alvo>0?720000/alvo:NaN;
+ $('pace-distance').textContent=Number.isFinite(alvo)?integer(alvo)+' m':'—';
+ $('pace-target').textContent=formatPace(p);$('pace-lap').textContent=formatPace(p*.4);
+ $('pace-half').textContent=formatPace(p*.2);$('pace-speed').textContent=alvo>0?(alvo/200).toLocaleString('pt-BR',{maximumFractionDigits:1})+' km/h':'—';
+ const pessoal=paceSeconds($('pace-input').value);$('pace-projection').textContent=Number.isFinite(pessoal)?integer(720000/pessoal)+' m':'—';
+ $('pace-note').textContent=Number.isFinite(min)?'Mínimo tabelado '+integer(min)+' m para o conceito '+$('pace-grade').value+' (sexo e idade informados). A margem é uma meta de treino opcional, não exigência normativa.':'Informe uma idade válida na Calculadora para gerar metas por faixa etária.';
+}
+function formatAlvo(tipo,valor){return tipo==='walk'?fmtTempo(valor):tipo==='waist'?comma(valor)+' cm':tipo==='run'?integer(valor)+' m':integer(valor)+' rep.'}
+function diagnostico(){const sel=Number($('global-goal').value),total=ultimo?.completou?ultimo.sum:NaN;
+ $('global-gap').textContent=Number.isFinite(total)?(total>=sel?'Meta global atingida nesta simulação ('+comma(total)+' pontos). Verifique também a suficiência em cada prova.':'Faltam '+comma(sel-total)+' pontos para o conceito global selecionado. Não basta a nota global se houver prova insuficiente.'):'Preencha os quatro resultados para calcular o que falta à meta global. Abaixo aparecem metas individuais conforme disponível.';
+ const rot={cintura:'Cintura',flexoes:'Flexões',abdominais:'Abdominais',aerobico:ESTADO.modo==='run'?'Corrida':'Caminhada'};
+ const rank={I:0,S:1,B:2,MB:3,E:4};
+ $('diagnostic-grid').innerHTML=Object.keys(rot).map(id=>{const r=ultimo?.r?.[id];
+ if(!r)return '<div class="goal-item"><strong>'+rot[id]+'</strong><small>Informe os dados desta prova.</small></div>';
+ const g=r.g,tipo=id==='cintura'?'waist':id==='flexoes'?'push':id==='abdominais'?'abs':ESTADO.modo;
+ const base=tipo==='waist'?ultimo.altura:ultimo.idade,faixa=idx(FAIXAS[ultimo.sexo][tipo],base);
+ const t=LIMITES[ultimo.sexo][tipo][faixa],maxPts={cintura:30,flexoes:10,abdominais:10,aerobico:50}[id];
+ const nextIdx=rank[g],next=nextIdx<4?t[nextIdx]:null;
+ const left=maxPts-r.pts;
+ const note=g==='I'?'Atenção: abaixo do índice de suficiência.':g==='E'?'Excelente na suficiência individual.':'Suficiente nesta prova.';
+ return '<div class="goal-item"><strong>'+rot[id]+' — '+g+' · '+comma(r.pts)+'/'+maxPts+'</strong><small>'+note+' Potencial de '+comma(left)+' ponto(s).'+(next!==null?' Próximo conceito: '+formatAlvo(tipo,next)+'.':'')+'</small></div>';
+ }).join('');
+ $('history-save').disabled=!ultimo?.completou;$('share').disabled=!ultimo?.completou;
+}
+function dadosAtuais(){return {sexo:ESTADO.sexo,idade:$('idade').value,estatura:$('estatura').value,modo:ESTADO.modo,cintura:$('cintura').value,flexoes:$('flexoes').value,abdominais:$('abdominais').value,aerobico:$('aerobico').value}};
+function recupera(d){if(!d||!['M','F'].includes(d.sexo))return;escolherSexo(d.sexo);$('idade').value=d.idade||'';$('estatura').value=d.estatura||'';escolherModo(d.modo==='walk'?'walk':'run');
+ for(const id of ['cintura','flexoes','abdominais','aerobico'])$(id).value=d[id]??'';recalcular();v2Update();}
+function historicoMostra(){const itens=safeGet(HIST_KEY,[]);const el=$('history-entries');if(!itens.length){el.innerHTML='<p class="storage-notice">Nenhuma simulação salva.</p>';return}
+ el.innerHTML=itens.map((o,i)=>'<div class="history-row"><div><strong>'+o.data+' — '+comma(o.score)+'/100 ('+o.grade+')</strong><small>'+(o.perfil.sexo==='F'?'Feminino':'Masculino')+', '+o.perfil.idade+' anos · '+(o.perfil.modo==='walk'?'4,8 km':'12 min')+'</small></div><button type="button" data-restore="'+i+'">Restaurar</button></div>').join('');
+ el.querySelectorAll('[data-restore]').forEach(btn=>btn.addEventListener('click',()=>{const item=safeGet(HIST_KEY,[])[Number(btn.dataset.restore)];if(item){recupera(item.perfil);tabMostra('calculadora')}}));}
+function v2Update(){safeSet(PERFIL_KEY,{sexo:ESTADO.sexo,idade:$('idade').value,estatura:$('estatura').value});paceAtualiza();diagnostico();if(!$('view-consulta').hidden)tabelasHTML()}
+function tabMostra(tab){document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===tab)));
+ for(const n of ['calculadora','consulta','sobre'])$('view-'+n).hidden=n!==tab;
+ if(tab==='consulta')tabelasHTML();window.scrollTo({top:0,behavior:'instant'});}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>tabMostra(b.dataset.tab)));
+for(const id of ['table-sex','table-test'])$(id).addEventListener('change',tabelasHTML);
+for(const id of ['pace-grade','pace-margin','pace-input'])$(id).addEventListener(id==='pace-input'?'input':'change',paceAtualiza);
+$('global-goal').addEventListener('change',diagnostico);
+$('history-save').addEventListener('click',()=>{if(!ultimo?.completou)return;
+ const rec={data:new Date().toLocaleDateString('pt-BR'),score:ultimo.sum,grade:$('global-code').textContent,perfil:dadosAtuais()};
+ const old=safeGet(HIST_KEY,[]);if(safeSet(HIST_KEY,[rec,...old].slice(0,15))){historicoMostra();$('history-save').textContent='Resultado salvo';setTimeout(()=>$('history-save').textContent='Salvar resultado',1400)}else alert('O armazenamento local não está disponível neste navegador.');});
+$('history-clear').addEventListener('click',()=>{if(!safeGet(HIST_KEY,[]).length)return;if(confirm('Apagar todas as simulações salvas neste dispositivo?')){try{localStorage.removeItem(HIST_KEY)}catch{}historicoMostra()}});
+$('share').addEventListener('click',async()=>{if(!ultimo?.completou)return;
+ const d=dadosAtuais(),txt='Simulação TACF — Anexos IV/V/VI do material enviado\n'+(d.sexo==='F'?'Feminino':'Masculino')+' · '+d.idade+' anos\n'+
+ 'Cintura: '+d.cintura+' cm | Flexões: '+d.flexoes+' | Abdominais: '+d.abdominais+'\n'+(d.modo==='run'?'Corrida 12 min: '+d.aerobico+' m':'Caminhada 4,8 km: '+d.aerobico)+'\nResultado: '+comma(ultimo.sum)+'/100 · '+$('global-code').textContent+'\nSimulação não oficial.';
+ try{if(navigator.share)await navigator.share({text:txt,title:'Simulação TACF'});else if(navigator.clipboard)await navigator.clipboard.writeText(txt);else window.prompt('Copie o resumo:',txt)}catch(e){if(e?.name!=='AbortError')window.prompt('Copie o resumo:',txt)}});
+// Eventos após handlers originais para manter consistência sem duplicar o motor de pontuação.
+for(const id of ['idade','estatura','cintura','flexoes','abdominais'])$(id).addEventListener('input',v2Update);
+document.querySelectorAll('[data-sex],[data-mode]').forEach(b=>b.addEventListener('click',v2Update));
+document.addEventListener('input',e=>{if(e.target?.id==='aerobico')v2Update()});
+$('reset').addEventListener('click',v2Update);
+const antigo=safeGet(PERFIL_KEY,null);if(antigo){if(['M','F'].includes(antigo.sexo))escolherSexo(antigo.sexo);$('idade').value=antigo.idade||'';$('estatura').value=antigo.estatura||'';recalcular()}
+// Inicialização sem gravar histórico automaticamente.
+historicoMostra();v2Update();
 </script>
 </body></html>
